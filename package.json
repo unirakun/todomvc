@@ -90,7 +90,6 @@
     "plugins": [
       "transform-class-properties",
       "transform-object-rest-spread",
-      "transform-inline-environment-variables",
       "react-hot-loader/babel",
       [
         "lodash",
