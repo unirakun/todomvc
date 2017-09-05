@@ -1,8 +1,8 @@
 import { put } from 'redux-saga/effects'
-import store from 'redux/todos'
-import * as ui from 'redux/ui'
+import store from 'redux/data/todos'
+import newTodo from 'redux/ui/newTodo'
 
 export function* add(todo) {
   yield put(store.add(todo))
-  yield put(ui.newTodo.reset())
+  yield put(newTodo.reset())
 }

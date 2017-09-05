@@ -1,6 +1,6 @@
 import { put } from 'redux-saga/effects'
-import * as ui from 'redux/ui'
+import newTodo from 'redux/ui/newTodo'
 
 export function* setNewTodo(todo) {
-  yield put(ui.newTodo.set(todo))
+  yield put(newTodo.set(todo))
 }

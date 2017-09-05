@@ -1,13 +1,11 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { routerForBrowser, initializeCurrentLocation } from 'redux-little-router'
+import { initializeCurrentLocation } from 'redux-little-router'
 import sagas from '../sagas'
-import router from './router'
-import reducers, { CONTEXT } from './reducers'
+import { enhancer, middleware } from './ui/router'
+import reducers from './reducers'
 
 const sagaMiddleware = createSagaMiddleware()
-
-const { enhancer, middleware } = routerForBrowser({ routes: router, basename: CONTEXT })
 
 const store = createStore(
   reducers,

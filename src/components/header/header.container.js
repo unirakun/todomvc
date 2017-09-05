@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { newTodo } from 'redux/ui'
+import newTodo from 'redux/ui/newTodo'
 import { setNewTodo, addTodo } from './header.actions'
 import Component from './header'
 
