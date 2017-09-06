@@ -1,0 +1,5 @@
+export const onCompleteTodo = (id, completed) => ({ type: 'ON_COMPLETE_TODO', payload: { id, completed } })
+export const onRemoveTodo = id => ({ type: 'ON_REMOVE_TODO', payload: id })
+export const onEditTodo = id => ({ type: 'ON_EDIT_TODO', payload: id })
+export const onUpdateTodo = (id, todo) => ({ type: 'ON_UPDATE_TODO', payload: { id, todo } })
+export const onChangeTodo = (id, todo) => ({ type: 'ON_CHANGE_TODO', payload: { id, todo } })
