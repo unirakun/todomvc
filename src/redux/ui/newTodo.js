@@ -1,3 +1,3 @@
 import { simpleObject } from 'trampss-redux-factory'
 
-export default simpleObject({ path: 'ui', name: 'newTodo', defaultData: '' })
+export default simpleObject({ name: 'newTodo', defaultData: '' })
