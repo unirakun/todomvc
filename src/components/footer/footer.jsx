@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 
-const Footer = ({ todosLeft, todosCompleted, router, goTo, onClearCompleted }) => {
+const Footer = ({ todos, todosLeft, todosCompleted, router, goTo, onClearCompleted }) => {
+  if (!todos) return null
   return (
     <footer className="footer">
       <span className="todo-count">
@@ -36,15 +37,12 @@ const Footer = ({ todosLeft, todosCompleted, router, goTo, onClearCompleted }) =
 }
 
 Footer.propTypes = {
+  todos: PropTypes.number.isRequired,
   todosLeft: PropTypes.number.isRequired,
   todosCompleted: PropTypes.number.isRequired,
   router: PropTypes.string.isRequired,
   goTo: PropTypes.func.isRequired,
   onClearCompleted: PropTypes.func.isRequired,
-}
-
-Footer.defaultProps = {
-  completedLength: 0,
 }
 
 export default onlyUpdateForPropTypes(Footer)
