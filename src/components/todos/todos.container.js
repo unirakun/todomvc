@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import todos from 'redux/data/todos'
 import completed from 'redux/ui/completed'
-import { onCompleteAll } from './todos.actions'
+import action from 'components/actionFactory'
 import Component from './todos'
 
 export const mapStateToProps = (state) => {
@@ -13,7 +13,7 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    onCompleteAll: e => dispatch(onCompleteAll(e.target.checked)),
+    onCompleteAll: e => dispatch(action('ON_COMPLETE_ALL', e.target.checked)),
   }
 }
 

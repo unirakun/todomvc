@@ -8,10 +8,14 @@ export function* setNewTodo(todo) {
 }
 
 export function* edit(todoId) {
-  const { todo } = yield select(todos.get(todoId))
-  yield put(editing.add({ id: todoId, editing: todo }))
+  const todo = yield select(todos.get(todoId))
+  yield put(editing.add(todo))
 }
 
-export function* setTodo(todo) {
-  yield put(editing.update({ ...todo, editing: todo.todo }))
+export function* cancelEdit(todoId) {
+  yield put(editing.remove(todoId))
+}
+
+export function* setEditTodo(todo) {
+  yield put(editing.update(todo))
 }

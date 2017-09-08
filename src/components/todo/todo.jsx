@@ -5,7 +5,7 @@ import classnames from 'classnames'
 
 const Todo = ({
   todo, completed, editing,
-  onCompleteTodo, onEditTodo, onUpdateTodo, onChangeTodo, onRemoveTodo, onCancelTodo,
+  onCompleteTodo, onEditTodo, onUpdateTodo, onChangeTodo, onRemoveTodo, onKeyDownTodo,
 }) => {
   return (
     <li className={classnames({ completed, editing })}>
@@ -25,6 +25,7 @@ const Todo = ({
         value={editing}
         onBlur={onUpdateTodo}
         onChange={onChangeTodo}
+        onKeyDown={onKeyDownTodo}
       />
     </li>
   )
@@ -39,7 +40,7 @@ Todo.propTypes = {
   onUpdateTodo: PropTypes.func.isRequired,
   onChangeTodo: PropTypes.func.isRequired,
   onRemoveTodo: PropTypes.func.isRequired,
-  onCancelTodo: PropTypes.func.isRequired,
+  onKeyDownTodo: PropTypes.func.isRequired,
 }
 
 Todo.defaultProps = {
