@@ -4,15 +4,17 @@ import { onlyUpdateForPropTypes } from 'recompose'
 import classnames from 'classnames'
 
 const Todo = ({
-  todo, completed, editing,
+  todo, completed, editing, show,
   onCompleteTodo, onEditTodo, onUpdateTodo, onChangeTodo, onRemoveTodo, onKeyDownTodo,
 }) => {
+  if ((show === 'ACTIVE' && completed) || (show === 'COMPLETED' && !completed)) return null
   return (
     <li className={classnames({ completed, editing })}>
       <div className="view">
         <input
           className="toggle"
           type="checkbox"
+          checked={completed}
           onChange={onCompleteTodo}
         />
         <label htmlFor="editField" onDoubleClick={onEditTodo}>
@@ -35,6 +37,7 @@ Todo.propTypes = {
   todo: PropTypes.string.isRequired,
   completed: PropTypes.bool,
   editing: PropTypes.string,
+  show: PropTypes.string,
   onCompleteTodo: PropTypes.func.isRequired,
   onEditTodo: PropTypes.func.isRequired,
   onUpdateTodo: PropTypes.func.isRequired,
@@ -45,6 +48,7 @@ Todo.propTypes = {
 
 Todo.defaultProps = {
   editing: '',
+  show: 'ALL',
   completed: false,
 }
 

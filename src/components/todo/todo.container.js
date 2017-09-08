@@ -3,6 +3,7 @@ import todos from 'redux/data/todos'
 import completed from 'redux/ui/completed'
 import editing from 'redux/ui/editing'
 import action from 'components/actionFactory'
+import { getTitle } from 'redux/ui/router'
 import Component from './todo'
 
 export const mapStateToProps = (state, { id }) => {
@@ -11,6 +12,7 @@ export const mapStateToProps = (state, { id }) => {
     ...todos.get(id)(state),
     ...completed.get(id)(state),
     editing: edit && edit.todo,
+    show: getTitle(state),
   }
 }
 

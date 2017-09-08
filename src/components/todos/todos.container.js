@@ -7,7 +7,7 @@ import Component from './todos'
 export const mapStateToProps = (state) => {
   return {
     todos: todos.getKeys(state),
-    allCompleted: completed.getLength(state) === todos.getLength(state),
+    allCompleted: completed.getBy('completed', true)(state).length === todos.getLength(state),
   }
 }
 
