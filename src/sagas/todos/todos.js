@@ -5,7 +5,7 @@ import completed from 'redux/ui/completed'
 import editing from 'redux/ui/editing'
 
 export function* add(todo) {
-  if (!todo.trim()) return
+  if (!todo || !todo.trim()) return
   yield put(store.add(todo))
   yield put(newTodo.reset())
 }
@@ -19,7 +19,7 @@ export function* remove(todoId) {
 export function* update(todoId) {
   const todo = yield select(editing.get(todoId))
   if (!todo) return
-  if (!todo.todo) yield call(remove, todoId)
+  if (!todo.todo || !todo.todo.trim()) yield call(remove, todoId)
   else yield put(store.update(todo))
   yield put(editing.remove(todoId))
 }

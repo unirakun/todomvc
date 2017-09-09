@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sagas/ui cancelEdit should edit todo 1`] = `
+Array [
+  Object {
+    "done": false,
+    "value": Object {
+      "@@redux-saga/IO": true,
+      "PUT": Object {
+        "action": Object {
+          "payload": "todo1",
+          "type": "@trampss/REMOVE_EDITING",
+        },
+        "channel": null,
+      },
+    },
+  },
+  Object {
+    "done": true,
+    "value": undefined,
+  },
+]
+`;
+
+exports[`sagas/ui edit should edit todo 1`] = `
+Array [
+  Object {
+    "raw": Object {
+      "done": false,
+      "value": Object {
+        "@@redux-saga/IO": true,
+        "SELECT": Object {
+          "args": Array [],
+          "selector": [Function],
+        },
+      },
+    },
+    "value": Object {
+      "id": "todo1",
+      "todo": "todo",
+    },
+  },
+  Object {
+    "done": false,
+    "value": Object {
+      "@@redux-saga/IO": true,
+      "PUT": Object {
+        "action": Object {
+          "payload": Object {
+            "id": "todo1",
+            "todo": "todo",
+          },
+          "type": "@trampss/ADD_EDITING",
+        },
+        "channel": null,
+      },
+    },
+  },
+  Object {
+    "done": true,
+    "value": undefined,
+  },
+]
+`;
+
+exports[`sagas/ui setEditTodo should edit todo 1`] = `
+Array [
+  Object {
+    "done": false,
+    "value": Object {
+      "@@redux-saga/IO": true,
+      "PUT": Object {
+        "action": Object {
+          "payload": "todo1",
+          "type": "@trampss/UPDATE_EDITING",
+        },
+        "channel": null,
+      },
+    },
+  },
+  Object {
+    "done": true,
+    "value": undefined,
+  },
+]
+`;
+
+exports[`sagas/ui setNewTodo should set new todo 1`] = `
+Array [
+  Object {
+    "done": false,
+    "value": Object {
+      "@@redux-saga/IO": true,
+      "PUT": Object {
+        "action": Object {
+          "payload": "todo",
+          "type": "@trampss/SET_NEWTODO",
+        },
+        "channel": null,
+      },
+    },
+  },
+  Object {
+    "done": true,
+    "value": undefined,
+  },
+]
+`;

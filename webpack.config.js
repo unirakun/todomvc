@@ -7,12 +7,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const dev = (process.env.NODE_ENV !== 'production')
 
-const cssLoaders = [
-  'css-loader?modules&localIdentName=[path]_[local]__[hash:base64:5]',
-  'postcss-loader',
-  'sass-loader',
-]
-
 function getEntrySources() {
   const entries = []
 
@@ -63,6 +57,17 @@ module.exports = {
         test: /\.jsx?$/,
         include: [path.resolve(__dirname, 'src')],
         use: ['babel-loader'],
+      },
+      {
+        test: /\.css$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules', 'todomvc-app-css'),
+        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
       },
     ],
   },
