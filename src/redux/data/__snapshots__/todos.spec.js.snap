@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`redux/todos todosMapper should create todo 1`] = `
+Object {
+  "id": 1451606400000,
+  "todo": "todo",
+}
+`;
+
+exports[`redux/todos todosMapper should create todo when todo is blank 1`] = `
+Object {
+  "id": 1451606400000,
+  "todo": "",
+}
+`;
+
+exports[`redux/todos todosMapper should create todo when todo is empty 1`] = `
+Object {
+  "id": 1451606400000,
+  "todo": "",
+}
+`;
