@@ -12,7 +12,7 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/heroku-buildpack-static"
+      "url": "heroku/node"
     }
   ]
 }

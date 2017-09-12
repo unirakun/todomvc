@@ -4,7 +4,8 @@
   "description": "TodoMVC with React / Redux / Redux-Saga",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --inline --hot --port=3000 --history-api-fallback --watch-poll=1000",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "dev": "webpack-dev-server --host 0.0.0.0 --inline --hot --port=3000 --history-api-fallback --watch-poll=1000",
     "build": "cross-env NODE_ENV=production webpack -p",
     "lint:js": "eslint --ext js,jsx src",
     "lint": "npm-run-all --parallel lint:*",

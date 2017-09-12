@@ -37,6 +37,7 @@ function getPlugins(plugins) {
 }
 
 module.exports = {
+  devtool: 'source-map',
   entry: { todomvc: getEntrySources() },
   output: {
     path: path.resolve('public'),
