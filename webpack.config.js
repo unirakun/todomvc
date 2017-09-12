@@ -1,9 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const dev = (process.env.NODE_ENV !== 'production')
 
@@ -27,12 +25,6 @@ function getPlugins(plugins) {
     hash: true,
   }))
 
-  if (!dev) {
-    plugins.push(new ExtractTextPlugin('todomvc.css'))
-  } else {
-    plugins.push(new webpack.NamedModulesPlugin())
-  }
-
   return plugins
 }
 
@@ -42,7 +34,7 @@ module.exports = {
   output: {
     path: path.resolve('public'),
     filename: '[name].js',
-    publicPath: dev ? '/' : '/todomvc/',
+    publicPath: '/',
   },
   resolve: {
     modules: [
@@ -58,17 +50,6 @@ module.exports = {
         test: /\.jsx?$/,
         include: [path.resolve(__dirname, 'src')],
         use: ['babel-loader'],
-      },
-      {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'node_modules', 'todomvc-app-css'),
-        ],
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
       },
     ],
   },
