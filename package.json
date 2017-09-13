@@ -77,9 +77,7 @@
       "src/components",
       "src"
     ],
-    "moduleNameMapper": {
-      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
-    },
+    "coveragePathIgnorePatterns": ["/misc/", "/node_modules/"],
     "setupFiles": [
       "./misc/testSetup.js"
     ]
@@ -88,16 +86,7 @@
     "plugins": [
       "transform-class-properties",
       "transform-object-rest-spread",
-      "react-hot-loader/babel",
-      [
-        "lodash",
-        {
-          "id": [
-            "lodash",
-            "recompose"
-          ]
-        }
-      ]
+      "react-hot-loader/babel"
     ],
     "presets": [
       "es2017",
