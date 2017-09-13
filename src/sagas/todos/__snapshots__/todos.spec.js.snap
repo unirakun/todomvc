@@ -439,36 +439,7 @@ Array [
         },
       },
     },
-    "value": Object {},
-  },
-  Object {
-    "raw": Object {
-      "done": false,
-      "value": Object {
-        "@@redux-saga/IO": true,
-        "CALL": Object {
-          "args": Array [
-            "todoDoesNotExist",
-          ],
-          "context": null,
-          "fn": [Function],
-        },
-      },
-    },
-    "value": false,
-  },
-  Object {
-    "done": false,
-    "value": Object {
-      "@@redux-saga/IO": true,
-      "PUT": Object {
-        "action": Object {
-          "payload": "todoDoesNotExist",
-          "type": "@trampss/REMOVE_EDITING",
-        },
-        "channel": null,
-      },
-    },
+    "value": undefined,
   },
   Object {
     "done": true,

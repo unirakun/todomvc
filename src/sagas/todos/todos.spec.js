@@ -40,7 +40,7 @@ describe('sagas/todos', () => {
 
     it('should not update todo when todo does not exist', () => {
       const mocks = {
-        select: [() => ({ })],
+        select: [() => undefined],
         call: [() => false],
       }
       expect(test('todoDoesNotExist')(mocks)).toMatchSnapshot()
