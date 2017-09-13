@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --inline --hot --port=3000 --history-api-fallback --watch-poll=1000",
+    "build": "cross-env NODE_ENV=production webpack -p",
     "lint:js": "eslint --ext js,jsx src",
     "lint": "npm-run-all --parallel lint:*",
     "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "analyze": "webpack --json > bundle.analyze.json"
   },
   "dependencies": {
@@ -24,8 +26,8 @@
     "redux": "^3.6.0",
     "redux-little-router": "^14.2.0",
     "redux-saga": "^0.14.3",
-    "todomvc-app-css": "^2.1.0",
-    "trampss-redux-factory": "^3.5.0",
+    "todomvc-app-css": "2.0.0",
+    "trampss-redux-factory": "^3.6.0-rc1",
     "trampss-redux-saga-tester": "^1.0.0"
   },
   "devDependencies": {
@@ -43,6 +45,7 @@
     "babel-preset-es2017": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
+    "coveralls": "^2.13.1",
     "cross-env": "^3.1.4",
     "css-loader": "^0.26.1",
     "enzyme": "^2.8.2",
@@ -53,21 +56,14 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^3.0.0-rc.2",
-    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.29.0",
     "identity-obj-proxy": "^3.0.0",
     "intl": "^1.2.5",
     "jest": "^19.0.2",
-    "json-stringify-safe": "^5.0.1",
-    "node-sass": "^4.3.0",
     "npm-run-all": "3.1.2",
-    "postcss-loader": "^1.2.2",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
     "redux-saga-test-plan": "^2.2.1",
-    "sass-lint": "1.10.2",
-    "sass-loader": "^4.1.1",
-    "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.1"

@@ -6,7 +6,7 @@ dependencies:
   cache_directories:
     - node_modules
   override:
-    - docker run --rm -v $(pwd):/usr/src/app zenika/alpine-node:onbuild-yarn yarn --pure-lockfile
+    - docker run --rm -v $(pwd):/usr/src/app zenika/alpine-node yarn
 
 test:
   pre:

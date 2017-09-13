@@ -1,17 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const dev = (process.env.NODE_ENV !== 'production')
-
-const cssLoaders = [
-  'css-loader?modules&localIdentName=[path]_[local]__[hash:base64:5]',
-  'postcss-loader',
-  'sass-loader',
-]
 
 function getEntrySources() {
   const entries = []
@@ -33,21 +25,16 @@ function getPlugins(plugins) {
     hash: true,
   }))
 
-  if (!dev) {
-    plugins.push(new ExtractTextPlugin('todomvc.css'))
-  } else {
-    plugins.push(new webpack.NamedModulesPlugin())
-  }
-
   return plugins
 }
 
 module.exports = {
+  devtool: 'source-map',
   entry: { todomvc: getEntrySources() },
   output: {
     path: path.resolve('public'),
     filename: '[name].js',
-    publicPath: dev ? '/' : '/todomvc/',
+    publicPath: '/',
   },
   resolve: {
     modules: [

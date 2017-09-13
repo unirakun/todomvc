@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 import { onlyUpdateForPropTypes } from 'recompose'
 import Todo from 'components/todo'
 
-const Todos = ({ todos, onCompleteAll, allCompleted }) => {
+const Todos = ({ todos, allCompleted, onCompleteAll }) => {
   return (
     <section className="main">
-      <input
-        className="toggle-all"
-        type="checkbox"
-        onChange={onCompleteAll}
-        checked={allCompleted}
-      />
+      {todos.length > 0 &&
+        <input
+          className="toggle-all"
+          type="checkbox"
+          onChange={onCompleteAll}
+          checked={allCompleted}
+        />
+      }
       <ul className="todo-list" >
         {todos.map(todo => <Todo key={todo} id={todo} />)}
       </ul>
