@@ -8,7 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack -p",
     "lint:js": "eslint --ext js,jsx src",
     "lint": "npm-run-all --parallel lint:*",
-    "test": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "analyze": "webpack --json > bundle.analyze.json"
   },
   "dependencies": {
