@@ -33,7 +33,7 @@ module.exports = {
   output: {
     path: path.resolve('docs'),
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: dev ? '/' : '/todomvc/',
   },
   resolve: {
     modules: [
