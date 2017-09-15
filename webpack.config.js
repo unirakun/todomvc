@@ -29,6 +29,7 @@ function getPlugins(plugins) {
 }
 
 module.exports = {
+  devtool: dev ? 'eval' : '',
   entry: { todomvc: getEntrySources() },
   output: {
     path: path.resolve('docs'),
