@@ -1,5 +1,7 @@
 import { routerForBrowser } from 'redux-little-router'
 
+const basename = process.env.NODE_ENV === 'production' ? '/todomvc' : ''
+
 export const { reducer, enhancer, middleware } = routerForBrowser({
   routes: {
     '/': { title: 'ALL',
@@ -7,5 +9,5 @@ export const { reducer, enhancer, middleware } = routerForBrowser({
       '/completed': { title: 'COMPLETED' },
     },
   },
+  basename,
 })
-
