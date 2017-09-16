@@ -7,7 +7,7 @@ import reducers from './reducers'
 import main from '../cycle'
 
 const cycleMiddleware = createCycleMiddleware()
-const { makeActionDriver } = cycleMiddleware
+const { makeActionDriver, makeStateDriver } = cycleMiddleware
 
 const store = createStore(
   reducers,
@@ -21,6 +21,7 @@ const store = createStore(
 
 run(main, {
   ACTION: makeActionDriver(),
+  STATE: makeStateDriver(),
 })
 
 const initialLocation = store.getState().router
