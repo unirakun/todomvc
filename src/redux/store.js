@@ -1,23 +1,27 @@
 import { createStore, compose, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
+import { run } from '@cycle/run'
+import { createCycleMiddleware } from 'redux-cycles'
 import { initializeCurrentLocation } from 'redux-little-router'
-import sagas from '../sagas'
 import { enhancer, middleware } from './ui/router'
 import reducers from './reducers'
+import main from '../cycle'
 
-const sagaMiddleware = createSagaMiddleware()
+const cycleMiddleware = createCycleMiddleware()
+const { makeActionDriver } = cycleMiddleware
 
 const store = createStore(
   reducers,
   compose(
     enhancer,
-    applyMiddleware(sagaMiddleware, middleware),
+    applyMiddleware(cycleMiddleware, middleware),
     /* eslint-env browser */
     window.devToolsExtension ? window.devToolsExtension() : f => f,
   ),
 )
 
-sagaMiddleware.run(sagas(store))
+run(main, {
+  ACTION: makeActionDriver(),
+})
 
 const initialLocation = store.getState().router
 if (initialLocation) {
