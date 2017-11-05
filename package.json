@@ -1,5 +1,5 @@
 {
-  "name": "trampss-todomvc",
+  "name": "k-todomvc",
   "version": "0.1.0",
   "description": "TodoMVC with React / Redux / Redux-Saga",
   "license": "MIT",
