@@ -13,15 +13,15 @@ export default function* () {
   yield takeLatest('NEW_TODO_CHANGED', action => ui.setNewTodo(action.payload))
   yield takeLatest('COMPLETE_TODO_CLICKED', action => todos.complete(action.payload))
   yield takeLatest('COMPLETE_ALL_CHANGED', action => todos.completeAll(action.payload))
-  yield takeLatest('TODO_DOUBLECLICKED', action => ui.edit(action.payload))
+  yield takeLatest('TODO_DOUBLE_CLICKED', action => ui.edit(action.payload))
   yield takeLatest('TODO_BLURED', action => todos.update(action.payload))
   yield takeLatest('TODO_CHANGED', action => ui.setEditTodo(action.payload))
   yield takeLatest('CLEAR_COMPLETED_CLICKED', todos.clearCompleted)
-  yield takeLatest('NEW_TODO_KEYDOWNED', (action) => {
+  yield takeLatest('NEW_TODO_KEYDOWN_PRESSED', (action) => {
     if (checkEnter(action)) return todos.add(action.payload.todo)
     return null
   })
-  yield takeLatest('TODO_KEYDOWNED', (action) => {
+  yield takeLatest('TODO_KEYDOWN_PRESSED', (action) => {
     if (checkEnter(action)) return todos.update(action.payload.id)
     if (checkEscape(action)) return ui.cancelEdit(action.payload.id)
     return null
