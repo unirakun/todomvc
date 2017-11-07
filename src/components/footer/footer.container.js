@@ -19,7 +19,7 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
   return {
     goTo: href => () => dispatch(push(href)),
-    onClearCompleted: () => dispatch(action('ON_CLEAR_COMPLETED')),
+    onClearCompleted: () => dispatch(action('CLICK_CLEAR_COMPLETED')),
   }
 }
 

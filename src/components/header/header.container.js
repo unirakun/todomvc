@@ -11,8 +11,8 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    addTodo: e => dispatch(action('ADD_NEW_TODO', { todo: e.target.value, keyCode: e.keyCode })),
-    onNewTodoChange: e => dispatch(action('ON_NEW_TODO_CHANGE', e.target.value)),
+    addTodo: e => dispatch(action('KEYDOWN_NEW_TODO', { todo: e.target.value, keyCode: e.keyCode })),
+    onNewTodoChange: e => dispatch(action('CHANGE_NEW_TODO', e.target.value)),
   }
 }
 
