@@ -9,19 +9,19 @@ const ESCAPE_KEY = 27
 const checkEscape = action => check(action, ESCAPE_KEY)
 
 export default function* () {
-  yield takeLatest('CLICK_REMOVE_TODO', action => todos.remove(action.payload))
-  yield takeLatest('CHANGE_NEW_TODO', action => ui.setNewTodo(action.payload))
-  yield takeLatest('CLICK_COMPLETE_TODO', action => todos.complete(action.payload))
-  yield takeLatest('CHANGE_COMPLETE_ALL', action => todos.completeAll(action.payload))
-  yield takeLatest('DOUBLECLICK_TODO', action => ui.edit(action.payload))
-  yield takeLatest('BLUR_TODO', action => todos.update(action.payload))
-  yield takeLatest('CHANGE_TODO', action => ui.setEditTodo(action.payload))
-  yield takeLatest('CLICK_CLEAR_COMPLETED', todos.clearCompleted)
-  yield takeLatest('KEYDOWN_NEW_TODO', (action) => {
+  yield takeLatest('REMOVE_TODO_CLICKED', action => todos.remove(action.payload))
+  yield takeLatest('NEW_TODO_CHANGED', action => ui.setNewTodo(action.payload))
+  yield takeLatest('COMPLETE_TODO_CLICKED', action => todos.complete(action.payload))
+  yield takeLatest('COMPLETE_ALL_CHANGED', action => todos.completeAll(action.payload))
+  yield takeLatest('TODO_DOUBLECLICKED', action => ui.edit(action.payload))
+  yield takeLatest('TODO_BLURED', action => todos.update(action.payload))
+  yield takeLatest('TODO_CHANGED', action => ui.setEditTodo(action.payload))
+  yield takeLatest('CLEAR_COMPLETED_CLICKED', todos.clearCompleted)
+  yield takeLatest('NEW_TODO_KEYDOWNED', (action) => {
     if (checkEnter(action)) return todos.add(action.payload.todo)
     return null
   })
-  yield takeLatest('KEYDOWN_TODO', (action) => {
+  yield takeLatest('TODO_KEYDOWNED', (action) => {
     if (checkEnter(action)) return todos.update(action.payload.id)
     if (checkEscape(action)) return ui.cancelEdit(action.payload.id)
     return null

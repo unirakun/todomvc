@@ -13,7 +13,7 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    onCompleteAll: e => dispatch(action('CHANGE_COMPLETE_ALL', e.target.checked)),
+    onCompleteAll: e => dispatch(action('COMPLETE_ALL_CHANGED', e.target.checked)),
   }
 }
 
