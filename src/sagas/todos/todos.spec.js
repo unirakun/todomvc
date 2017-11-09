@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import tester from 'trampss-redux-saga-tester'
+import tester from 'k-redux-saga-tester'
 import { add, remove, update, complete, completeAll, clearCompleted } from './todos'
 
 describe('sagas/todos', () => {

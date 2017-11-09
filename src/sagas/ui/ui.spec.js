@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import tester from 'trampss-redux-saga-tester'
+import tester from 'k-redux-saga-tester'
 import { setNewTodo, edit, cancelEdit, setEditTodo } from './ui'
 
 describe('sagas/ui', () => {
