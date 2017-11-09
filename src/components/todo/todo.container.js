@@ -18,12 +18,12 @@ export const mapStateToProps = (state, { id }) => {
 
 export const mapDispatchToProps = (dispatch, { id }) => {
   return {
-    onCompleteTodo: e => dispatch(action('ON_COMPLETE_TODO', { id, completed: e.target.checked })),
-    onEditTodo: () => dispatch(action('ON_EDIT_TODO', id)),
-    onUpdateTodo: () => dispatch(action('ON_UPDATE_TODO', id)),
-    onKeyDownTodo: e => dispatch(action('ON_KEYDOWN_TODO', { id, keyCode: e.keyCode })),
-    onChangeTodo: e => dispatch(action('ON_CHANGE_TODO', { id, todo: e.target.value })),
-    onRemoveTodo: () => dispatch(action('ON_REMOVE_TODO', id)),
+    onCompleteTodo: e => dispatch(action('COMPLETE_TODO_CLICKED', { id, completed: e.target.checked })),
+    onEditTodo: () => dispatch(action('TODO_DOUBLE_CLICKED', id)),
+    onUpdateTodo: () => dispatch(action('TODO_BLURED', id)),
+    onKeyDownTodo: e => dispatch(action('TODO_KEYDOWN_PRESSED', { id, keyCode: e.keyCode })),
+    onChangeTodo: e => dispatch(action('TODO_CHANGED', { id, todo: e.target.value })),
+    onRemoveTodo: () => dispatch(action('REMOVE_TODO_CLICKED', id)),
   }
 }
 
