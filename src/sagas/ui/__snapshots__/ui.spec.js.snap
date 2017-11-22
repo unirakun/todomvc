@@ -9,7 +9,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_EDITING",
+          "type": "@@krf/REMOVE_EDITING",
         },
         "channel": null,
       },
@@ -50,7 +50,7 @@ Array [
             "id": "todo1",
             "todo": "todo",
           },
-          "type": "@trampss/ADD_EDITING",
+          "type": "@@krf/ADD_EDITING",
         },
         "channel": null,
       },
@@ -72,7 +72,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/UPDATE_EDITING",
+          "type": "@@krf/UPDATE_EDITING",
         },
         "channel": null,
       },
@@ -94,7 +94,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo",
-          "type": "@trampss/SET_NEWTODO",
+          "type": "@@krf/SET_NEWTODO",
         },
         "channel": null,
       },

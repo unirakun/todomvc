@@ -9,7 +9,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/ADD_TODOS",
+          "type": "@@krf/ADD_TODOS",
         },
         "channel": null,
       },
@@ -21,7 +21,7 @@ Array [
       "@@redux-saga/IO": true,
       "PUT": Object {
         "action": Object {
-          "type": "@trampss/RESET_NEWTODO",
+          "type": "@@krf/RESET_NEWTODO",
         },
         "channel": null,
       },
@@ -129,7 +129,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/ADD_COMPLETED",
+          "type": "@@krf/ADD_COMPLETED",
         },
         "channel": null,
       },
@@ -387,7 +387,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_TODOS",
+          "type": "@@krf/REMOVE_TODOS",
         },
         "channel": null,
       },
@@ -400,7 +400,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_EDITING",
+          "type": "@@krf/REMOVE_EDITING",
         },
         "channel": null,
       },
@@ -413,7 +413,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_COMPLETED",
+          "type": "@@krf/REMOVE_COMPLETED",
         },
         "channel": null,
       },
@@ -489,7 +489,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_EDITING",
+          "type": "@@krf/REMOVE_EDITING",
         },
         "channel": null,
       },
@@ -543,7 +543,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_EDITING",
+          "type": "@@krf/REMOVE_EDITING",
         },
         "channel": null,
       },
@@ -584,7 +584,7 @@ Array [
             "id": "todo1",
             "todo": "todoOnEdit",
           },
-          "type": "@trampss/UPDATE_TODOS",
+          "type": "@@krf/UPDATE_TODOS",
         },
         "channel": null,
       },
@@ -597,7 +597,7 @@ Array [
       "PUT": Object {
         "action": Object {
           "payload": "todo1",
-          "type": "@trampss/REMOVE_EDITING",
+          "type": "@@krf/REMOVE_EDITING",
         },
         "channel": null,
       },
