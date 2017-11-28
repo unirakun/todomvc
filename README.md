@@ -3,3 +3,9 @@
 
 # Demo
 [![todomvc](https://image.noelshack.com/fichiers/2017/44/7/1509875726-todo.png)](https://alakarteio.github.io/todomvc/)
+
+## Talk
+ - [BDX.io 2017](https://www.youtube.com/watch?v=SHrSdNzQcXM&index=19&list=PLUJzERpatfsW5PbUcMAIOIqfCoqS7K1F1)
+
+## Slides
+ - [BDX.io 2017](https://docs.google.com/presentation/d/1q1Mq-hMF5ZCJ3XMMMhMuhujO2HJp7Z4InKlXZfFMh6o/edit?usp=sharing)
