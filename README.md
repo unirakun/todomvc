@@ -4,7 +4,7 @@
 # Application
 <p align="center">
   <a href="https://alakarteio.github.io/todomvc/" target="_blank">
-    <img src="https://image.noelshack.com/fichiers/2017/44/7/1509875726-todo.png" />
+    <img src="https://preview.ibb.co/dkgb0G/Capture_d_e_cran_2017_11_30_a_19_09_13.png" />
   </a>
 </p>
 
