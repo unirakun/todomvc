@@ -8,13 +8,13 @@
   </a>
 </p>
 
-# Talk
+# Talks
 ## Who
  - alakarte [[Twitter](https://twitter.com/alakarteio) | [Github](https://github.com/alakarteio)]
  - Guillaume CRESPEL [[Twitter](https://twitter.com/guillaumcrespel) | [Github](https://github.com/guillaumecrespel)]
  - Fabien JUIF [[Twitter](https://twitter.com/fabienjuif) | [Github](https://github.com/fabienjuif)]
 
-## Deck
+## Decks
  - [Latest](https://docs.google.com/presentation/d/1q1Mq-hMF5ZCJ3XMMMhMuhujO2HJp7Z4InKlXZfFMh6o/edit?usp=sharing) (BDX.io Bordeaux, France - 2017 /en/)
 
 ## Videos
