@@ -1,4 +1,4 @@
-# Todo MVC with ReactJS + Redux-saga + Redux
+# Todo MVC with ReactJS + Redux-Saga + Redux
 [![CircleCI](https://circleci.com/gh/alakarteio/todomvc.svg?style=svg)](https://circleci.com/gh/alakarteio/todomvc) [![Coverage Status](https://coveralls.io/repos/github/alakarteio/todomvc/badge.svg?branch=master)](https://coveralls.io/github/alakarteio/todomvc?branch=master)
 
 # Application
@@ -10,7 +10,6 @@
 
 # Talks
 ## Who
- - alakarte [[Twitter](https://twitter.com/alakarteio) | [Github](https://github.com/alakarteio)]
  - Guillaume CRESPEL [[Twitter](https://twitter.com/guillaumcrespel) | [Github](https://github.com/guillaumecrespel)]
  - Fabien JUIF [[Twitter](https://twitter.com/fabienjuif) | [Github](https://github.com/fabienjuif)]
 
