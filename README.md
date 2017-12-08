@@ -1,5 +1,5 @@
 # Todo MVC with ReactJS + Redux-Saga + Redux
-[![CircleCI](https://circleci.com/gh/alakarteio/todomvc.svg?style=svg)](https://circleci.com/gh/alakarteio/todomvc) [![Coverage Status](https://coveralls.io/repos/github/alakarteio/todomvc/badge.svg?branch=master)](https://coveralls.io/github/alakarteio/todomvc?branch=master)
+[![CircleCI](https://circleci.com/gh/alakarteio/todomvc.svg?style=shield)](https://circleci.com/gh/alakarteio/todomvc) [![Coverage Status](https://coveralls.io/repos/github/alakarteio/todomvc/badge.svg?branch=master)](https://coveralls.io/github/alakarteio/todomvc?branch=master)
 
 # Application
 <p align="center">
