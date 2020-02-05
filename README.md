@@ -1,9 +1,9 @@
 # Todo MVC with ReactJS + Redux-Saga + Redux
-[![CircleCI](https://circleci.com/gh/alakarteio/todomvc.svg?style=shield)](https://circleci.com/gh/alakarteio/todomvc) [![Coverage Status](https://coveralls.io/repos/github/alakarteio/todomvc/badge.svg?branch=master)](https://coveralls.io/github/alakarteio/todomvc?branch=master)
+[![CircleCI](https://circleci.com/gh/unirakun/todomvc.svg?style=shield)](https://circleci.com/gh/unirakun/todomvc) [![Coverage Status](https://coveralls.io/repos/github/unirakun/todomvc/badge.svg?branch=master)](https://coveralls.io/github/unirakun/todomvc?branch=master)
 
 # Application
 <p align="center">
-  <a href="https://alakarteio.github.io/todomvc/" target="_blank">
+  <a href="https://unirakun.github.io/todomvc/" target="_blank">
     <img src="https://preview.ibb.co/dkgb0G/Capture_d_e_cran_2017_11_30_a_19_09_13.png" />
   </a>
 </p>
@@ -22,10 +22,10 @@
 ## Events
  - [BDX.io Bordeaux, France - 2017](https://www.bdx.io/#/)
 
-# About ![alakarteio](http://alakarte.io/assets/img/logo.markdown.png)
-**alakarteio** is created by two passionate french developers.
+# About uni rakun
+**uni rakun** is created by two passionate french developers.
 
-Do you want to contact them ? Go to their [website](http://alakarte.io)
+Do you want to contact them ? Go to their [website](https://unirakun.fr)
 
 <table border="0">
  <tr>
